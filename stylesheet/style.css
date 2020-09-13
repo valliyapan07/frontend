@@ -314,9 +314,6 @@ html,body{
 html,body{
   overflow-x: hidden !important;
 }
-body {
-  position: absolute;
-}
 .imp{
   display: block !important;
   width: 15%;
