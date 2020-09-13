@@ -315,7 +315,7 @@ html,body{
   overflow-x: hidden !important;
 }
 body {
-  position: relative;
+  position: fixed;
 }
 .imp{
   display: block !important;
