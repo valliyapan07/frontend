@@ -223,7 +223,7 @@
             <p class="email-invalid">Please insert a valid email</p>
             <p class="email-empty">Email field cannot be empty</p>
           </div>
-          <button class="button-go" onclick="return validateMyForm('mail');">GO</button>
+          <button class="button-go" onclick="return validateMyForm('mail2');">GO</button>
         </form>
         <div class="copyrts">
           <p class="cop">Copyright 2020. All Rights Reserved</p>
@@ -234,11 +234,11 @@
       <div class="form-container">
         <form class="form" id="form">
           <div>
-            <input class="form-email" placeholder="updates in your inbox..." id="mail" name="mail">
+            <input class="form-email" placeholder="updates in your inbox..." id="mail2" name="mail2">
             <p class="email-invalid">Please insert a valid email</p>
             <p class="email-empty">Email field cannot be empty</p>
           </div>
-          <button class="button-go" onclick="return validateMyForm('mail');">GO</button>
+          <button class="button-go" onclick="return validateMyForm2('mail2');">GO</button>
         </form>
       </div>
       <div class="link-container">
@@ -290,6 +290,24 @@
       }
       document.getElementsByClassName("email-empty")[0].style.display = "none";
       document.getElementsByClassName("email-invalid")[0].style.display = "block";
+      return false;
+    }
+  }
+  function validateMyForm2(id) {
+    var str = document.getElementById(id).value;
+    if (str.length == 0) {
+      document.getElementsByClassName("email-empty")[1].style.display = "block";
+      document.getElementsByClassName("email-invalid")[1].style.display = "none";
+      return false;
+    }
+    else {
+      const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      var flag = re.test(str);
+      if (flag) {
+        return true;
+      }
+      document.getElementsByClassName("email-empty")[1].style.display = "none";
+      document.getElementsByClassName("email-invalid")[1].style.display = "block";
       return false;
     }
   }
