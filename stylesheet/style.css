@@ -1,6 +1,6 @@
 html,body{
   font-family: 'Be Vietnam';
-  overflow-x: hidden !important;
+  overflow-x: hidden;
 }
 
 .slice{
@@ -310,7 +310,38 @@ html,body{
 .caros,.na,.cross{
   display: none !important;
 }
-@media only screen and (max-width:768px){
+@media only screen and (max-width:1079px){
+html,body{
+  overflow-x: hidden !important;
+}
+.slice{
+  height: 80%;
+  top: -12%;
+  right: -12%;
+  width: auto;
+}
+.intro{
+  top: 20%;
+  right: 4%;
+  width: 45%;
+}
+.center{
+  margin-left: 4%;
+}
+.slice2{
+  top: 245%;
+  left: -25%;
+  height: 80%;
+  width: auto;
+}
+.lower-div2{
+  margin-left: 6%;
+}
+.lower{
+  margin-left: 10%;
+}
+}
+@media only screen and (max-width:769px){
 html,body{
   overflow-x: hidden !important;
 }
@@ -405,7 +436,7 @@ html,body{
   text-align: center;
 }
 .slice2 {
-    top: 64%;
+    top: 66%;
     left: 64%;
     overflow: hidden;
     height: 52%;
